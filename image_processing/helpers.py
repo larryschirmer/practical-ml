@@ -4,6 +4,7 @@ import numpy as np
 
 
 def normalize(data, divisor):
+    data = data.reshape(len(data), 28, 28, 1)
     return data / divisor
 
 
@@ -50,6 +51,17 @@ def plot_history(history, filename='image_processing/history.png'):
     plt.tight_layout()
     fig.savefig(filename)
 
+
+class mnistTrainingCallback(tf.keras.callbacks.Callback):
+    def __init__(self, target_accuracy):
+        self.target_accuracy = target_accuracy
+
+    def on_epoch_end(self, epoch, logs={}):
+        epoch_val_accuracy = logs.get('val_accuracy')
+
+        if epoch_val_accuracy > self.target_accuracy:
+            print("\n\nTarget accuracy achieved, '{}'\n".format(epoch_val_accuracy))
+            self.model.stop_training = True
 
 # model.summary()
 
