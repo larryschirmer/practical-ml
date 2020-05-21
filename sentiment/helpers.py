@@ -12,10 +12,10 @@ class Word_Index():
         self.reverse_word_dict = dict(
             [(value, key) for (key, value) in self.word_dict.items()])
 
-    def get_word(self, word_index, default=None):
+    def get_word(self, word_index, default="<unk>"):
         return self.reverse_word_dict.get(word_index, default)
 
-    def get_index(self, word, default=None):
+    def get_index(self, word, default=0):
         return self.word_dict.get(word, default)
 
 
