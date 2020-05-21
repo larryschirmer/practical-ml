@@ -31,7 +31,13 @@ Overlay onto the input image the parts where the model focused on to generate it
 Predict the sentiment of a movie review using a one hot encoding of the Keras imdb dataset. Train a new model to predict either positive or negative classification from a binary two dimensional.
 
 ```python
+review = "best movie best actors high praise"
+tokenized_review = tokenizer.tokenize(review)
+encoded_review = [word_index.get_index(word) for word in tokenized_review]
+one_hot_review = one_hot([encoded_review])
 
+prediction = model.predict(one_hot_review)
+print(prediction) # [[0.592]]
 ```
 
 #### Embedding and PCA Visualization
