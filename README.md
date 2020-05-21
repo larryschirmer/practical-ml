@@ -8,23 +8,23 @@ The project repository can be found here [https://github.com/Vadikus/practicalDL
 
 #### Linear Regression
 
-Estimate the values for `w` (slope) and `b` (bias) that best fit a linear dataset. After generating a set of noisy points along a known slope and bias, use the `GradientTape` TensorFlow method to estimate the values for `w` (slope) and `b` (bias). 
+Estimate the values for `w` (slope) and `b` (bias) that best fit a linear dataset. After generating a set of noisy points along a known slope and bias, use the `GradientTape` TensorFlow method to estimate the values for `w` (slope) and `b` (bias).
 
 This project reinforces the concepts behind the fitting process that TensorFlow uses.
 
-<insert linear regression gif>
+<img src="https://github.com/larryschirmer/practical-ml/raw/master/assets/linear_regression.gif" alt="insert linear regression gif" width="600"/>
 
 #### MNIST Classification
 
 Predict the value of a written number in an image. Train a convolutional model using Keras' own mnist dataset to correctly output the value of a written number as an integer.
 
-<mnist example>
+<img src="https://github.com/larryschirmer/practical-ml/raw/master/assets/mnist_example.png" alt="mnist example" width="600"/>
 
 #### CNNs and Attention
 
 Overlay onto the input image the parts where the model focused on to generate its output. Import the trained VGG16 model from Keras and generate a list of predictions for what is in the image. Then overlay the last convolutional layer on top of the image as a heat map.
 
-<attention example>
+<img src="https://github.com/larryschirmer/practical-ml/raw/master/assets/attention_example.png" alt="attention example" width="600"/>
 
 #### Sentiment using One Hot Encoding
 
@@ -46,7 +46,7 @@ Train an embedding layer using imdb reviews from TensorFlow Datasets. Then visua
 
 [https://projector.tensorflow.org/](https://projector.tensorflow.org/)
 
-<visualize enbedding>
+<img src="https://github.com/larryschirmer/practical-ml/raw/master/assets/visualize_embedding.gif" alt="visualize enbedding" width="600"/>
 
 #### Text Classification using LSTM
 
